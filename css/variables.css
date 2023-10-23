@@ -1,0 +1,19 @@
+:root {
+  /* === Typography */
+  --ff-teamName: Verdana, sans-serif;
+  --ff-scores: 'Cursed Timer ULiL', sans-serif;
+  --ff-newGame: 'VT323', monospace;
+
+  /* === Background-color === */
+  --bgc-checkboxLabel: #111;
+  --bgc-checkboxBall: #FFF;
+  --bgc-darkTheme-body: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(27, 36, 74, 1) 60%, rgba(0, 36, 116, 1) 100%);
+  --bgc-lightTheme-body: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(244, 244, 244, 1) 50%, rgba(241, 241, 241, 1) 100%);
+
+  /* === Color === */
+  --c-moon: #F1C40F;
+  --c-sun: #F39C12;
+  --c-darkTheme-teamName: #EEE;
+  --c-darkTheme-score: #F94F6D;
+  --c-darkTheme-newGame: #EEE;
+}

@@ -1,0 +1,138 @@
+/* ===============
+   GLOBAL
+=============== */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* ===============
+   THEME BUTTON
+=============== */
+
+.theme {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: var(--bgc-checkboxLabel);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: var(--c-moon);
+}
+
+.fa-sun {
+  color: var(--c-sun);
+}
+
+.checkbox-label .ball {
+  background-color: var(--bgc-checkboxBall);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+/* ===============
+   TYPOGRAPHY
+=============== */
+
+.teamFont {
+  font-family: var(--ff-teamName);
+}
+
+.scoreFont {
+  font-family: var(--ff-scores);
+}
+
+.newGameFont {
+  font-family: var(--ff-newGame);
+}
+
+.main-wrapper {
+  position: relative;
+
+  display: grid;
+  grid-template:
+    "sbh" 200px
+    "sbg" 200px
+    "nwg" 100px;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100dvh;
+
+  background: var(--bgc-lightTheme-body);
+}
+
+.scoreboard.home {
+  grid-area: sbh;
+  background-color: pink;
+}
+
+.scoreboard.guest {
+  grid-area: sbg;
+  background-color: blue;
+}
+
+.newGame {
+  grid-area: nwg;
+  background-color: red;
+}
+
+@media (prefers-color-scheme: dark) {
+  .checkbox:checked+.checkbox-label .ball {
+    transform: translateX(-24px);
+  }
+
+  .checkbox-label .ball {
+    left: 24px;
+    transition: transform 0.2s linear;
+  }
+
+  .main-wrapper {
+    background: var(--bgc-darkTheme-body);
+  }
+}
