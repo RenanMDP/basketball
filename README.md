@@ -1,3 +1,3 @@
-## Scrimba's Hometown Project
+## Scrimba's Basketball Project
 
 https://renanmdp.github.io/basketball/
