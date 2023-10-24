@@ -1,0 +1,16 @@
+.checkbox:checked+.checkbox-label .ball {
+  transform: translateX(-24px);
+}
+
+.checkbox-label .ball {
+  left: 26px;
+  transition: transform 0.2s linear;
+}
+
+.main-wrapper {
+  background: var(--bgc-darkTheme-body);
+}
+
+.teamName {
+  color: var(--c-darkTheme-teamName);
+}

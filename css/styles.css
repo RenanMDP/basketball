@@ -21,6 +21,7 @@ li {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  text-align: center;
 }
 
 /* ===============
@@ -78,12 +79,26 @@ li {
    TYPOGRAPHY
 =============== */
 
-.teamFont {
+.teamName {
   font-family: var(--ff-teamName);
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1.1px;
 }
 
-.scoreFont {
+.teamName.dark {
+  color: var(--c-darkTheme-teamName);
+}
+
+.score,
+.points {
   font-family: var(--ff-scores);
+}
+
+.score {
+  color: var(--c-darkTheme-score);
+  font-size: 5rem;
+  height: 4.5rem;
 }
 
 .newGameFont {
@@ -95,44 +110,44 @@ li {
 
   display: grid;
   grid-template:
-    "sbh" 200px
-    "sbg" 200px
+    "sbh" 300px
+    "sbg" 300px
     "nwg" 100px;
 
   justify-content: center;
   align-items: center;
 
   min-height: 100dvh;
+}
 
+.main-wrapper.dark {
+  background: var(--bgc-darkTheme-body);
+}
+
+.main-wrapper.light {
   background: var(--bgc-lightTheme-body);
 }
 
 .scoreboard.home {
   grid-area: sbh;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .scoreboard.guest {
   grid-area: sbg;
-  background-color: blue;
+  /* background-color: blue; */
+}
+
+.scoreboard .container {
+  background-color: var(--bgc-darkTheme-score);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
 }
 
 .newGame {
   grid-area: nwg;
-  background-color: red;
-}
-
-@media (prefers-color-scheme: dark) {
-  .checkbox:checked+.checkbox-label .ball {
-    transform: translateX(-24px);
-  }
-
-  .checkbox-label .ball {
-    left: 24px;
-    transition: transform 0.2s linear;
-  }
-
-  .main-wrapper {
-    background: var(--bgc-darkTheme-body);
-  }
+  /* background-color: red; */
 }
