@@ -80,8 +80,6 @@ li {
   font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 1.1px;
-
-  /* margin-bottom: 1.5rem; */
 }
 
 .teamName.dark {
@@ -107,10 +105,6 @@ li {
   position: relative;
 
   display: grid;
-  /* grid-template:
-    "sbh" 300px
-    "sbg" 300px
-    "nwg" 100px; */
   grid-template:
     "sbw" 1fr
     "nwg" auto;
@@ -127,16 +121,6 @@ li {
 
 .main-wrapper.light {
   background: var(--bgc-lightTheme-body);
-}
-
-.scoreboard.home {
-  /* grid-area: sbh; */
-  /* background-color: pink; */
-}
-
-.scoreboard.guest {
-  /* grid-area: sbg; */
-  /* background-color: blue; */
 }
 
 .scoreboard-wrapper {
@@ -176,8 +160,9 @@ li {
 
   color: var(--c-darkTheme-points);
 
-  /* background-color: red; */
   min-width: 100%;
+
+  margin-bottom: 0.5rem;
 }
 
 .scoreboard .points li {
@@ -187,6 +172,79 @@ li {
   border-radius: 5px;
 }
 
+.scoreboard .points li:hover,
+.scoreboard .points li:focus {
+  -webkit-text-stroke: var(--c-darkTheme-stroke);
+  paint-order: stroke fill;
+}
+
+.main-wrapper.dark .scoreboard .points li:hover,
+.main-wrapper.dark .scoreboard .points li:focus,
+.main-wrapper.dark .newGame h1:hover,
+.main-wrapper.dark .newGame h1:focus {
+  background-color: var(--bgc-darkTheme-newGame-hover);
+
+  transition: background-color 0.3s;
+}
+
+.main-wrapper.light .scoreboard .points li:hover,
+.main-wrapper.light .scoreboard .points li:focus,
+.main-wrapper.light .newGame h1:hover,
+.main-wrapper.light .newGame h1:focus {
+  background-color: var(--bgc-lightTheme-newGame-hover);
+
+  transition: background-color 0.3s;
+}
+
 .newGame {
   grid-area: nwg;
+
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.newGame h1 {
+  font-size: 2rem;
+
+  box-shadow: 2px 2px black;
+
+}
+
+.dark .newGame h1 {
+  background-color: var(--bgc-darkTheme-newGame);
+  color: var(--c-darkTheme-newGame);
+}
+
+.light .newGame h1 {
+  background-color: var(--bgc-lightTheme-newGame);
+}
+
+.newGame h1,
+.scoreboard .points li {
+  cursor: pointer;
+  user-select: none;
+}
+
+.newGame h1:active {
+  box-shadow: 2px 2px black inset;
+}
+
+@media screen and (min-width: 600px) {
+  .main-wrapper {
+    grid-template:
+      "sbw" 1fr
+      "nwg" 300px / 500px;
+  }
+
+  .scoreboard-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .scoreboard .points {
+    margin-bottom: 0;
+  }
+
+  .newGame {
+    margin: 0;
+  }
 }

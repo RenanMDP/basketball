@@ -10,6 +10,10 @@
   --bgc-darkTheme-body: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(27, 36, 74, 1) 60%, rgba(0, 36, 116, 1) 100%);
   --bgc-lightTheme-body: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(244, 244, 244, 1) 50%, rgba(241, 241, 241, 1) 100%);
   --bgc-darkTheme-score: #080001;
+  --bgc-darkTheme-newGame: #9AABD8;
+  --bgc-darkTheme-newGame-hover: #EEE;
+  --bgc-lightTheme-newGame: #6466b4;
+  --bgc-lightTheme-newGame-hover: #47b6c2;
 
   /* === Color === */
   --c-moon: #F1C40F;
@@ -18,4 +22,5 @@
   --c-darkTheme-score: #F94F6D;
   --c-darkTheme-newGame: #EEE;
   --c-darkTheme-points: #9AABD8;
+  --c-darkTheme-stroke: 3px #940a23;
 }

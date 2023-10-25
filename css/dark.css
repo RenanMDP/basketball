@@ -14,3 +14,24 @@
 .teamName {
   color: var(--c-darkTheme-teamName);
 }
+
+.teamName,
+.scoreboard .points li,
+.newGame h1 {
+  -webkit-text-stroke: var(--c-darkTheme-stroke);
+  paint-order: stroke fill;
+}
+
+.newGame h1 {
+  background-color: var(--bgc-darkTheme-newGame);
+  color: var(--c-darkTheme-newGame);
+}
+
+.scoreboard .points li:hover,
+.scoreboard .points li:focus,
+.newGame h1:hover,
+.newGame h1:focus {
+  background-color: var(--bgc-darkTheme-newGame-hover);
+
+  transition: background-color 0.3s;
+}
